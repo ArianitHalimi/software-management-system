@@ -1,13 +1,13 @@
-import DBConfig from './config/database.configuration';
+import { DATABASE } from '../config/database.configuration';
 import { Sequelize } from 'sequelize'
 
 class DatabaseConnection{
-    private database = DBConfig;
+    private database = DATABASE;
     private connection: any = null;
 
     constructor() { }
 
-    private createConnection(){
+    connectToDatabase(){
         try {
             this.connection = new Sequelize(
                 this.database.options.databaseName, 
@@ -21,18 +21,20 @@ class DatabaseConnection{
                     }
                 }
             );
-        } catch (error: any) {
-            this.connection = null;
+
+            return this.connection;
+        } catch (error) {
+            console.log(error)
+            return null;
         }
     }
 
-    connectToDatabase(){
-        this.createConnection();
-        return this.connection;
-    }
-
-    async checkConnection(): Promise<void> { 
-        await this.connection.authenticate();
+    async checkConnection(){
+        try {
+            await this.connection.authenticate();
+        } catch (error) {
+            throw error;
+        }
     }
 }
 

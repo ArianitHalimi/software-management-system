@@ -1,6 +1,6 @@
 import express from 'express'
-import ErrorHandler from './global/handlers/error.handler';
-import { IRoute } from './all/interfaces/route.interface'
+import ErrorHandler from './handlers/error.handler';
+import { IRoute } from './interfaces/route.interface'
 
 class Application {
     public app: express.Application;

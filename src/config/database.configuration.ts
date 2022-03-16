@@ -1,4 +1,4 @@
-const DBConfig = {
+export const DATABASE = {
     type: 'SQL',
     database: 'mysql',
     dialect: 'mysql',
@@ -9,5 +9,3 @@ const DBConfig = {
         databaseName: 'softwareManagementSystem'
     }
 }
-
-export default DBConfig;

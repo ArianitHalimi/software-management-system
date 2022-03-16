@@ -1,6 +1,5 @@
-import DatabaseConnection from '../database.connection';
-import { DataTypes, literal } from 'sequelize';
-
+import DatabaseConnection from '../database/database.connection';
+import { DataTypes, literal } from 'sequelize'
 let db = new DatabaseConnection()
 let sequelize = db.connectToDatabase()
 
