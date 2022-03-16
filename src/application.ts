@@ -1,5 +1,5 @@
 import express from 'express'
-import ErrorHandler from './all/handlers/error.handler';
+import ErrorHandler from './global/handlers/error.handler';
 import { IRoute } from './all/interfaces/route.interface'
 
 class Application {
@@ -43,5 +43,3 @@ class Application {
 }
 
 export default Application;
-
-//https://www.toptal.com/nodejs/node-js-error-handling

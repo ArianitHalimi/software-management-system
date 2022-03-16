@@ -1,4 +1,4 @@
-import statusCodes from "../utils/status.codes";
+import statusCodes from '../utils/status.codes';
 
 export class HttpException extends Error{
     statusCode: number;

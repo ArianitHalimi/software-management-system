@@ -1,10 +1,10 @@
 import Application from './application'
 import config from './configuration';
-import DatabaseConnection from './all/database/database.connection'
+import DatabaseConnection from './data/database.connection'
 import cors from 'cors'
 
 import IndexRoute from './all/api-routes/index.route'
-import requestLimiter from './all/middlewares/rate.limit';
+import requestLimiter from './global/middlewares/rate.limit';
 
 const app = new Application([new IndexRoute()], config.PORT, DatabaseConnection)
 
