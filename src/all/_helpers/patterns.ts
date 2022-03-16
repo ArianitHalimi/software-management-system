@@ -1,0 +1,1 @@
+export const ALPHABET_CHARACTERS_PATTERN = /^[A-Za-z]+$/
