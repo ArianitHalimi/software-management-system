@@ -1,7 +1,7 @@
 import * as jwt from 'jsonwebtoken'
 import { Request, Response, NextFunction } from "express";
 import { securityConfiguration } from "../config/security.configuration";
-import { Unauthorized } from "../../global/exceptions/http.exception";
+import { Unauthorized } from "../exceptions/http.exception";
 import User from "../schemas/user.schema";
 
 const authMiddleware = async(request: Request, response: Response, next: NextFunction) => {

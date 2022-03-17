@@ -1,7 +1,7 @@
 import { Router } from 'express'
 import IndexController from '../controllers/index.controller'
 import { IRoute } from '../interfaces/route.interface'
-import SafeState from '../../global/handlers/safe.state'
+import SafeState from '../handlers/safe.state'
 import { RegisterValidator } from '../_validators/register.validator.schema'
 
 class IndexRoute implements IRoute {
